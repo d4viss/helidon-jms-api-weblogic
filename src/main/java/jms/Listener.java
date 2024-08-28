@@ -23,6 +23,6 @@ public class Listener {
      */
     @Incoming("from-wls-2")
     public void receiveTestQueue2(JmsMessage<String> msg) {
-        System.out.println("received from from-wls-2: " + msg.getPayload());
+        System.out.println("received from from-wls-2: " + msg.getPayload() + "\nCorrelationId: " + msg.getCorrelationId());
     }
 }
